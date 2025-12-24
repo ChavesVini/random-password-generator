@@ -1,21 +1,25 @@
-<script setup lang="ts">
-
 const UPPER_CASE_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const LOWER_CASE_LETTERS = "abcdefghijklmnopqrstuvwxyz"
 const NUMBERS = "0123456789"
 const SYMBOLS = "!\"#$%&'()*+-./:;<=>?@[\]^_`{|}~"
 
 function randomChar(chars: string): string {
-  return chars[Math.floor(Math.random() * chars.length)]
+  return String(chars[Math.floor(Math.random() * chars.length)])
 }
 
 function shuffle(array: string[]): string[] {
   return array.sort(() => Math.random() - 0.5)
 }
 
-function generate_random_password(upper: boolean, lower: boolean, number: boolean, symbols: boolean, password_length: number) {
+export default function generate_random_password(upper: boolean, lower: boolean, number: boolean, symbols: boolean, password_length: number) {
   let charPool = ""
   let password: string[] = []
+
+  console.log(upper)
+  console.log(lower)
+  console.log(number)
+  console.log(symbols)
+  console.log(password_length)
 
   if (upper) charPool += UPPER_CASE_LETTERS
   if (lower) charPool += LOWER_CASE_LETTERS
@@ -28,8 +32,3 @@ function generate_random_password(upper: boolean, lower: boolean, number: boolea
 
   return shuffle(password).join("")
 }
-</script>
-
-<template>
-
-</template>

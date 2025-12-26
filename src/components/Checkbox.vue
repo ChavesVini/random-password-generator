@@ -7,9 +7,7 @@ defineProps<{
   size?: 'small' | 'medium' | 'large'
 }>()
 
-const emit = defineEmits<{
-  (e: 'update:modelValue', value: boolean): void
-}>()
+const emit = defineEmits<(e: 'update:modelValue', value: boolean) => void>()
 </script>
 
 <template>

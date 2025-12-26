@@ -1,7 +1,7 @@
 const UPPER_CASE_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const LOWER_CASE_LETTERS = "abcdefghijklmnopqrstuvwxyz"
 const NUMBERS = "0123456789"
-const SYMBOLS = "!\"#$%&'()*+-./:;<=>?@[\]^_`{|}~"
+const SYMBOLS = "!\"#$%&'()*+-./:;<=>?@[\\]^_`{|}~"
 
 function randomChar(chars: string): string {
   return String(chars[Math.floor(Math.random() * chars.length)])
@@ -11,7 +11,7 @@ function shuffle(array: string[]): string[] {
   return array.sort(() => Math.random() - 0.5)
 }
 
-export default function generate_random_password(upper: boolean, lower: boolean, number: boolean, symbols: boolean, password_length: number) {
+export function generate_random_password(upper: boolean, lower: boolean, number: boolean, symbols: boolean, password_length: number) {
   let charPool = ""
   let password: string[] = []
 
@@ -31,4 +31,32 @@ export default function generate_random_password(upper: boolean, lower: boolean,
   }
 
   return shuffle(password).join("")
+}
+
+export function calculate_entropy(password: string): number {
+  let R = 0
+
+  if (/\d/.test(password)) R += 10
+  if (/[a-z]/.test(password)) R += 26
+  if (/[A-Z]/.test(password)) R += 26
+  if (/[^A-Za-z0-9]/.test(password)) R += 32
+
+  if (R === 0) return 0
+
+  return password.length * Math.log2(R)
+}
+
+export type PasswordStrengthStatus =
+  | 'default'
+  | 'error'
+  | 'warning'
+  | 'success'
+  | 'info'
+
+export function entropy_to_strength(
+  entropy: number
+): { label: string; status: PasswordStrengthStatus } {
+  if (entropy < 60) return { label: 'Weak', status: 'error' }
+  if (entropy < 75) return { label: 'Medium', status: 'warning' }
+  return { label: 'Strong', status: 'success' }
 }

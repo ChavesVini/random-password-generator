@@ -1,27 +1,26 @@
-# password-generator
+```text
+ ____                    _                             
+|  _ \  __ _  _ __    __| |  ___   _ __ ___            
+| |_) |/ _` || '_ \  / _` | / _ \ | '_ ` _ \           
+|  _ <| (_| || | | || (_| || (_) || | | | | |          
+|_|_\_\\__,_||_| |_| \__,_| \___/ |_| |_| |_|    _     
+|  _ \  __ _  ___  ___ __      __ ___   _ __  __| |    
+| |_) |/ _` |/ __|/ __|\ \ /\ / // _ \ | '__|/ _` |    
+|  __/| (_| |\__ \\__ \ \ V  V /| (_) || |  | (_| |    
+|_|___ \__,_||___/|___/  \_/\_/  \___/ |_|   \__,_|    
+ / ___|  ___  _ __    ___  _ __  __ _ | |_  ___   _ __ 
+| |  _  / _ \| '_ \  / _ \| '__|/ _` || __|/ _ \ | '__|
+| |_| ||  __/| | | ||  __/| |  | (_| || |_| (_) || |   
+ \____| \___||_| |_| \___||_|   \__,_| \__|\___/ |_|   
+```
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is part of a challenge taken from
+[app-ideas by florinpop17](https://github.com/florinpop17/app-ideas).
 
-## Recommended IDE Setup
+This project specifically uses TypeScript as the programming language
+and Vue.js as the framework.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+Below, you can find the project setup and hot-reload instructions for development.
 
 ## Project Setup
 
@@ -33,22 +32,4 @@ npm install
 
 ```sh
 npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```

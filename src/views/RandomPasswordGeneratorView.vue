@@ -243,4 +243,15 @@ const generate_password = () => {
   margin: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .container-random-password-generator {
+    max-width: 90vw;
+    max-height: 80vh;
+  }
+
+  .password-box {
+    max-width: 70vw;
+  }
+}
+
 </style>

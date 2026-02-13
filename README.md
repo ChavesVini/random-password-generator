@@ -14,15 +14,16 @@
  \____| \___||_| |_| \___||_|   \__,_| \__|\___/ |_|   
 ```
 
-This project is part of a challenge taken from
-[app-ideas by florinpop17](https://github.com/florinpop17/app-ideas).
+## About 
+This project is a random password generator web application focused on delivering a responsive interface. It was developed based on the ["app-ideas" challenge by florinpop17](https://github.com/florinpop17/app-ideas), following the proposed User Stories.
 
-This project specifically uses TypeScript as the programming language
-and Vue.js as the framework.
-
-Below, you can find the project setup and hot-reload instructions for development.
+## Technologies Used
+Vue.js: Framework used for building a modular UI.<br>
+TypeScript: Main language to ensure type safety and code reliability.<br>
+CSS: Custom styling with a strong focus on responsiveness.
 
 ## Project Setup
+Below, you can find the project setup and hot-reload instructions for development.
 
 ```sh
 npm install
